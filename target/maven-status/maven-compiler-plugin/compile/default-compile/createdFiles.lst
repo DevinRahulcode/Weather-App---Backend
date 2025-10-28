@@ -1,0 +1,16 @@
+com/example/weather_service/repository/FavoriteCityRepository.class
+com/example/weather_service/dto/internal/FavoriteCityDTO.class
+com/example/weather_service/entity/FavoriteCity.class
+com/example/weather_service/dto/external/response/GeocodingApiResponse$Result.class
+com/example/weather_service/dto/external/response/WeatherApiResponse.class
+com/example/weather_service/controller/FavoriteCityController.class
+com/example/weather_service/dto/internal/SimpleWeatherDTO$SimpleWeatherDTOBuilder.class
+com/example/weather_service/config/RestTemplateConfig.class
+com/example/weather_service/WeatherServiceApplication.class
+com/example/weather_service/service/WeatherService.class
+com/example/weather_service/dto/internal/SimpleWeatherDTO.class
+com/example/weather_service/controller/WeatherController.class
+com/example/weather_service/dto/external/response/WeatherApiResponse$Current.class
+com/example/weather_service/dto/external/response/WeatherApiResponse$CurrentUnits.class
+com/example/weather_service/service/FavoriteCityService.class
+com/example/weather_service/dto/external/response/GeocodingApiResponse.class

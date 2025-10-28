@@ -1,0 +1,48 @@
+# Removed obsolete version tag
+services:
+  # MySQL Database Service
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-weather-db # Changed container name
+    ports:
+      - "3308:3306" # Changed host port to 3308
+    environment:
+      MYSQL_DATABASE: weather_db # Changed database name
+      # Set the root password
+      MYSQL_ROOT_PASSWORD: password # Changed password
+    volumes:
+      - mysql-weather-data:/var/lib/mysql # Changed volume name
+    networks:
+      - weather-network # Changed network name
+    healthcheck:
+      # Updated healthcheck to use the new password
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Spring Boot Application Service
+  weather-backend: # Changed service name
+    build: .
+    container_name: weather-backend-service # Changed container name
+    ports:
+      - "8081:8080"
+    environment:
+      # Updated configuration for the weather database and password
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/weather_db?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password # Changed password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+    networks:
+      - weather-network # Changed network name
+    depends_on:
+      mysql-db:
+        condition: service_healthy # Waits for DB healthcheck
+
+volumes:
+  mysql-weather-data: # Changed volume name
+
+networks:
+  weather-network: # Changed network name

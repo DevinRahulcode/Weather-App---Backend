@@ -1,0 +1,12 @@
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/WeatherServiceApplication.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/config/RestTemplateConfig.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/controller/FavoriteCityController.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/controller/WeatherController.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/dto/external/response/GeocodingApiResponse.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/dto/external/response/WeatherApiResponse.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/dto/internal/FavoriteCityDTO.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/dto/internal/SimpleWeatherDTO.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/entity/FavoriteCity.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/repository/FavoriteCityRepository.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/service/FavoriteCityService.java
+/Users/devinrahul/Documents/Java/projects/weather-service/src/main/java/com/example/weather_service/service/WeatherService.java
